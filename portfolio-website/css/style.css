@@ -341,12 +341,10 @@ h3.my-profession {
     flex: 0 0 40%;
     max-width: 40%;
     position: relative;
-    /* THE CHANGE IS HERE: Increased padding to make the inner image smaller */
     padding: 30px; 
-    border-radius: 5px; /* Optional: matches image radius */
+    border-radius: 5px;
 }
 
-/* The decorative corner borders (No changes needed here) */
 .home .home-img::after {
     content: '';
     position: absolute;
@@ -371,13 +369,12 @@ h3.my-profession {
     transition: all 0.3s ease;
 }
 
-/* The image itself (No changes needed here) */
 .home .home-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Prevents image distortion */
+    object-fit: cover;
     border-radius: 5px;
-    display: block; /* Removes any extra space below the image */
+    display: block;
 }
 
 /* About Section */
@@ -424,13 +421,13 @@ h3.my-profession {
     font-weight: 400;
     color: var(--text-black-700);
     margin-left: 4px;
-    display: inline-block; /* was none */
+    display: inline-block;
 }
 .about .about-content .personal-info .buttons {
     margin-top: 30px;
 }
 .about .about-content .personal-info .buttons .btn {
-    margin-top: 10px; /* was margin-right and no margin-top */
+    margin-top: 10px;
 }
 
 
@@ -621,13 +618,13 @@ h3.my-profession {
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
-    background-color: var(--bg-black-100); /* Added for consistency */
+    background-color: var(--bg-black-100);
 }
 .portfolio .portfolio-item-inner .portfolio-img img {
     width: 100%;
     display: block;
-    height: 200px; /* Fixed height for images */
-    object-fit: cover; /* Or 'contain' depending on desired effect */
+    height: 200px; 
+    object-fit: cover; 
 }
 .portfolio .portfolio-item-inner .portfolio-info {
     padding: 15px;
@@ -644,7 +641,7 @@ h3.my-profession {
     color: var(--text-black-700);
     line-height: 20px;
     margin-bottom: 15px;
-    min-height: 60px; /* To ensure some consistency in text height */
+    min-height: 60px;
 }
 .portfolio .portfolio-item-inner .portfolio-info .btn {
     font-size: 14px;
@@ -728,7 +725,10 @@ h3.my-profession {
     padding: 0 50px;
 }
 
-/* Responsive Styles */
+/* ==================================== */
+/*          Responsive Styles           */
+/* ==================================== */
+
 @media (max-width: 1199px) {
     .section .container {
         padding-top: 70px;
@@ -769,9 +769,16 @@ h3.my-profession {
         flex: 0 0 100%;
         max-width: 100%;
     }
+    
+    /* === THIS IS THE UPDATED CODE FOR THE MOBILE IMAGE === */
     .home .home-img {
-        display: none;
+        flex: 0 0 100%;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
     }
+    /* === END OF UPDATE === */
 }
 
 @media (max-width: 767px) {
